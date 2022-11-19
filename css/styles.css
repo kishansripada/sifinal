@@ -1,0 +1,142 @@
+.current-link {
+    color: #ffb1d4;
+    text-decoration: underline;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    flex-grow: 1;
+}
+
+footer {
+    margin-top: auto;
+    display: flex;
+    background-color: #bad5ff;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+
+
+}
+
+nav {
+    margin-top: auto;
+    display: flex;
+    background-color: #2f2f2f;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    font-size: medium;
+}
+
+a {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: aqua;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+#now {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 70%;
+    place-items: center;
+}
+
+#young {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+
+}
+
+div#now img {
+    width: 100%;
+}
+
+div#young img {
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #now {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div#young img {
+        width: 50%;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    #now {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #young {
+        flex-direction: row;
+    }
+
+    div#young img {
+        width: 15%;
+    }
+
+    nav {
+        font-size: x-large;
+    }
+}
+
+
+div#main img {
+    width: 30%;
+}
+
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-main:focus,
+a.skip-main:active {
+    color: black;
+    background-color: white;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+}
