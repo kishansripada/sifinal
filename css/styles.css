@@ -69,6 +69,15 @@
     animation-fill-mode: forwards;
 }
 
+#now img {
+    border-radius: 20px;
+}
+
+#young img {
+    border-radius: 20px;
+}
+
+
 @media (prefers-reduced-motion) {
     .anim {
         animation: none;
@@ -118,7 +127,6 @@
 
 #modal img {
     width: 100%;
-
     border-radius: 20px;
 }
 
@@ -172,6 +180,7 @@ h1 {
     grid-template-columns: 1fr;
     width: 70%;
     place-items: center;
+    gap: 20px;
 }
 
 #young {
@@ -183,9 +192,15 @@ h1 {
 
 }
 
+div#now img:last-child {
+    grid-column: span 4;
+    margin-bottom: 20px;
+}
+
 div#now img {
     width: 100%;
 }
+
 
 div#young img {
     width: 100%;
@@ -199,7 +214,17 @@ div#young img {
     width: 100%;
 }
 
+div#now img:last-child {
+    grid-column: span 1;
+
+}
+
 @media (min-width: 768px) {
+    div#now img:last-child {
+        grid-column: span 2;
+        margin-bottom: 20px;
+    }
+
     #homeContainer {
 
         flex-direction: row;
@@ -228,6 +253,10 @@ div#young img {
 }
 
 @media (min-width: 1024px) {
+    div#now img:last-child {
+        grid-column: span 4;
+        margin-bottom: 20px;
+    }
 
     #now {
         grid-template-columns: 1fr 1fr 1fr 1fr;
